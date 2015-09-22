@@ -1,1 +1,21 @@
-test
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>アップロードサンプル</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/upload_form.js"></script>
+  </head>
+  <body>
+    <h1>アップロードサンプル</h1>
+    <p>Welcome to アップロードサンプル</p>
+    <h2>下のフォームにファイルをドロップするとファイルをアップロードできます。</h2>
+    <style>
+      form { background:#efefef; border:1px dotted #ccc; height:100px; width:100px; }
+      input[type=file] { display:none; }
+    </style>
+    <form id="upload">
+      <input type="file" multiple="multiple" enctype="multipart/form-data" name="upload_files">
+    </form>
+  </body>
+</html>
