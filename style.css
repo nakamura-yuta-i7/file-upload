@@ -1,0 +1,21 @@
+html, body {
+  height:100%;
+}
+body {
+  margin:0;
+  padding:0;
+
+}
+.drag {
+  border:5px dotted #00d5a8;
+
+}
+#progress-bar-wrapper {
+  border:1px solid #efefef;
+  background: #efefef;
+}
+#progress-bar {
+  height:10px;
+  width:0px;
+  background: #00d5a8;
+}
