@@ -13,5 +13,6 @@
     <div id="progress-bar-wrapper">
       <div id="progress-bar"></div>
     </div>
+    <div id="uploaded_files"></div>
   </body>
 </html>

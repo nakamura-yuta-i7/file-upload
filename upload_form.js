@@ -1,4 +1,7 @@
 $(function(){
+
+  showUploadedFiles();
+
   $(document).bind("drop", function(e){
     e.preventDefault();
     // ファイル情報を取得
@@ -11,7 +14,7 @@ $(function(){
     return false;
 
   }).bind("dragenter", function(e){
-    e.preventDefault();
+    // e.preventDefault();
     console.log("dragenter");
     $("body").addClass("drag");
 
@@ -19,20 +22,17 @@ $(function(){
     return false;
 
   }).bind("dragleave", function(e){
-    e.preventDefault();
+    // e.preventDefault();
     console.log("dragleave");
-
-  }).bind("dragend", function(e){
-    console.log("dragend");
-
-  }).bind("dragstart", function(e){
-    console.log("dragstart");
-
-  }).bind("drag", function(e){
-    console.log("drag");
 
   });
 });
+
+function showUploadedFiles() {
+  console.log(arguments.callee.name);
+  var time = new Date();
+  $("#uploaded_files").load("/uploaded_files.php?timestamp="+time.getTime());
+}
 
 function uploadFiles(files) {
   var fd = new FormData();
@@ -59,6 +59,7 @@ function uploadFiles(files) {
     },
     success: function(data) {
       console.log('ファイルがアップロードされました。');
+      showUploadedFiles();
     }
   });
 }
